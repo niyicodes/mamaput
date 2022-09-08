@@ -5,10 +5,11 @@
  gap: 2rem;
  height: 5rem;
  align-items: center;
- font-size: 1.2rem;
+ font-size: 1.1rem;
  color: white;
  text-transform: uppercase;
  width: 100vw;
+ font-family: 'Lato', sans-serif;
 
  .navbar-logo {
   color: white;
@@ -17,6 +18,9 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  text-transform: none;
+  letter-spacing: .2rem;
+  font-family: 'Courgette', cursive;
  }
 
  .search{
@@ -33,6 +37,10 @@
    color: rgb(77, 77, 77);
    font-weight: bolder;
   }
+ }
+
+ .icons{
+  font-size: 1.3rem;
  }
  
  .nav-menu {

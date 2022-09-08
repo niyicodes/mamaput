@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
+import {BsPersonCircle} from 'react-icons/bs'
+import {GiHotMeal} from 'react-icons/gi'
 
 const Header = () => {
  const [click, setClick] = useState(false);
@@ -12,7 +14,7 @@ const Header = () => {
  return (
   <header>
    <nav className="navbar">
-    <Link to='/' className="navbar-logo">mamaput</Link>
+    <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>mamaput</Link>
 
     <div className="menu-icon" onClick={handleClick}>
      <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -37,10 +39,10 @@ const Header = () => {
       <Link to='/contactUs' className="nav-links" onClick={closeMobileMenu}>contact</Link>
      </li>
      <li className="nav-item">
-      <Link to='/signIn-signUp' className="nav-links icons" onClick={closeMobileMenu}>person-icon</Link>
+      <Link to='/signIn-signUp' className="nav-links icons" onClick={closeMobileMenu}><BsPersonCircle /></Link>
      </li>
      <li className="nav-item">
-      <Link to='/history' className="nav-links icons" onClick={closeMobileMenu}>history</Link> 
+      <Link to='/history' className="nav-links icons" onClick={closeMobileMenu}><GiHotMeal /></Link> 
      </li>
     </ul>
    </nav>

@@ -1,0 +1,30 @@
+font-family: 'Courgette', cursive;
+font-family: 'Romanesco', cursive;
+font-family: 'Lato', sans-serif;
+
+const handleChange = event => {
+  const {value, name} = event.target
+  setState(prevData => {
+   return{
+    ...prevData,
+    [name]: value
+   }
+  })
+ }
+
+ const [formData, setFormData] = useState({
+  email: '',
+  password: '',
+  confirmPassword: '',
+  displayName: ''
+ })
+
+
+ <FormInput 
+  name="displayName" 
+  type="text" 
+  value={formData.displayName} 
+  onChange={handleChange}
+  label='Display Name' 
+  required
+ />
