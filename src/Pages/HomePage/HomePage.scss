@@ -1,0 +1,67 @@
+main{
+ max-width: 100%;
+ 
+ .landing-container{
+  background-color: #300017;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  height: 110vh;
+  z-index: 3000;
+ 
+  .textarea{
+   width: 50%;
+   margin-top: 3rem;
+   h3{
+    font-size: 5.3rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    word-spacing: .9rem;
+    letter-spacing: .4rem;
+    color: #FA9E0B;
+    padding: 1rem 0;
+   }
+
+   p{
+    font-size: 1.5rem;
+    color: white;
+    text-align: left;
+    padding-bottom: 1.2rem;
+   }
+
+   button{
+    color: black;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: .3rem 5rem;
+    align-self: center;
+    background-color:#FA9E0B ;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+   
+
+    &:hover{
+     color: #FA9E0B;
+     background-color:white ;
+     border: 3px solid #FA9E0B;
+     outline: none;
+    }
+   }
+  }
+  .imagearea{
+   width: 60%;
+   img{
+    width: 85%;
+   }
+  }
+ }
+ .hot{
+  width: 100vw;
+  height: auto;
+  margin-top: -18rem;
+  z-index: -2000;
+ }
+}
