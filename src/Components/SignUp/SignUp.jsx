@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import { createUserWithEmailAndPassword} from "firebase/auth";
+import { collection, addDoc,} from "firebase/firestore";
+import { auth, db } from '../../Firebase/firebase'
 import CustomButton from '../Button/CustomButton'
 import FormInput from '../FormInput/FormInput'
 import './SignUp.scss'
@@ -22,12 +25,35 @@ const SignUp = () => {
   })
  }
 
+ const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  const { email, password, confirmPassword, displayName } = formData;
+
+  if(password !== confirmPassword){
+   alert("Passwords don't match")
+  }
+
+  try{
+   const res = await createUserWithEmailAndPassword(auth, email, password);
+   const user = res.user;
+   await addDoc(collection(db, "users"), {
+    uid: user.uid,
+    name: displayName,
+    authProvider: "local",
+    email,
+   });
+  } catch(err){
+   alert(err.message);
+  }
+ }
+
  return (
   <div className="sign-up">
    <h2 className="title">I do not have an account</h2>
    <span>Sign up with your email and password</span>
 
-   <form  className="sign-up-form">
+   <form  className="sign-up-form" onSubmit={handleSubmit}>
     <FormInput 
      name="displayName" 
      type="text" 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { registerWithEmailAndPassword, signInWithGoogle } from '../../Firebase/firebase';
+import { signInWithGoogle } from '../../Firebase/firebase';
+import {signInWithEmailAndPassword} from "firebase/auth";
+import { auth} from '../../Firebase/firebase'
 import CustomButton from '../Button/CustomButton';
 import FormInput from '../FormInput/FormInput';
 import './SingIn.scss';
@@ -23,7 +25,13 @@ const SignIn = () => {
 
  const handleSubmit = async (e)=> {
   e.preventDefault();
-  
+  const {email, password} = state;
+  try{
+   await signInWithEmailAndPassword(auth,email, password);
+   setState({email:"", password:""})
+  } catch (err) {
+   alert(err.message)
+  }
  }
 
  return (
@@ -51,7 +59,7 @@ const SignIn = () => {
     />
 
     <div className="button">
-     <CustomButton type="submit"  onClick={registerWithEmailAndPassword} buttonName="Sign In"/>
+     <CustomButton type="submit" buttonName="Sign In"/>
      <CustomButton  onClick={signInWithGoogle} isGoogleSignIn buttonName="Google"/>
     </div>
    </form>
