@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Header.scss'
 import {BsPersonCircle} from 'react-icons/bs'
 import {GiHotMeal} from 'react-icons/gi'
@@ -14,7 +14,7 @@ const Header = () => {
  return (
   <header>
    <nav className="navbar">
-    <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>mamaput</Link>
+    <NavLink to='/' className="navbar-logo" onClick={closeMobileMenu}>mamaput</NavLink>
 
     <div className="menu-icon" onClick={handleClick}>
      <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -30,19 +30,19 @@ const Header = () => {
 
     <ul className={click ? "nav-menu active" : 'nav-menu'}>
      <li className="nav-item">
-      <Link to='/foodmenu' className="nav-links" onClick={closeMobileMenu}>foodmenu</Link>
+      <NavLink to='/foodmenu' activeclassname="active" className="nav-links" onClick={closeMobileMenu}>foodmenu</NavLink>
      </li>
      <li className="nav-item">
-      <Link to='/orders' className="nav-links" onClick={closeMobileMenu}>order</Link>
+      <NavLink to='/orders' activeclassname="active" className="nav-links" onClick={closeMobileMenu}>order</NavLink>
      </li>
      <li className="nav-item">
-      <Link to='/contactUs' className="nav-links" onClick={closeMobileMenu}>contact</Link>
+      <NavLink to='/contactUs' activeclassname="active" className="nav-links" onClick={closeMobileMenu}>contact</NavLink>
      </li>
      <li className="nav-item">
-      <Link to='/signIn-signUp' className="nav-links icons" onClick={closeMobileMenu}><BsPersonCircle /></Link>
+      <NavLink to='/signIn-signUp' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><BsPersonCircle /></NavLink>
      </li>
      <li className="nav-item">
-      <Link to='/history' className="nav-links icons" onClick={closeMobileMenu}><GiHotMeal /></Link> 
+      <NavLink to='/history' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><GiHotMeal /></NavLink> 
      </li>
     </ul>
    </nav>
