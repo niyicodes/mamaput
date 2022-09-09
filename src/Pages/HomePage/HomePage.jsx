@@ -1,5 +1,6 @@
 import React from 'react'
 import CustomButton from '../../Components/Button/CustomButton';
+import VerticalCard from '../../Components/Card/VerticalCard/VerticalCard';
 import './HomePage.scss'
 
 const HomePage = () => {
@@ -18,6 +19,18 @@ const HomePage = () => {
     </figure>
    </div>
    <img className="hot" src="asset/Hot.png" alt="Hot" />
+   <div className="discountedarea">
+    <div className="textbutton">
+     <h3>discount meals</h3>
+     <CustomButton buttonName="more ➡" />
+    </div>
+    <div className="cardarea">
+     <VerticalCard />
+     <VerticalCard />
+     <VerticalCard />
+     <VerticalCard />
+    </div>
+   </div>
   </main>
  )
 }
