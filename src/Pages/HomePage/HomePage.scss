@@ -8,11 +8,12 @@ main{
   flex-direction: row;
   gap: 2rem;
   height: 106vh;
-  z-index: 3000;
+  
  
   .textarea{
    width: 50%;
    margin-top: 3rem;
+   z-index: 2000;
    h3{
     font-size: 5.3rem;
     font-family: 'Oswald', sans-serif;
@@ -92,35 +93,79 @@ main{
    padding: 2rem;
   }
  }
- @media (max-width:359px){
 
+ @media(max-width:1280px){
   .landing-container{
-   height: 90vh;
-   padding: 1rem;
+   padding: 1rem 2rem 3rem 2rem;
+   height: 107vh;
    .textarea{
-    width: 100%;
-    margin-top: 0;
+    margin-top: 1rem;
     h3{
-     font-size: 3.5rem;
-     text-align: center;
+     font-size: 5rem;
+     word-spacing: .5rem;
+     padding: .5rem 0;
     }
     p{
-     font-size: .8rem;
-     text-align: justify;
-    }
-    button{
-     margin: auto;
+     font-size: 1.3rem;
+     padding-bottom: 1rem;
     }
    }
    .imagearea{
-    display: none;
+    margin-top: 3rem;
    }
   }
   .hot{
-   margin-top: -5rem;
-   height: 7rem;
+   margin-top: -14rem;
+   z-index: -1000;
   }
- } //end of media query
+  .discountedarea{
+   margin: 1rem 3rem;
+   overflow-y: hidden;
+   .cardarea{
+    grid-template-columns: repeat(3, 1fr);
+   }
+   .cardarea>div:last-child{
+    display: none;
+
+   }
+  }
+ }
+ 
+ @media(max-width:884px){
+  .landing-container{
+   height: 90vh;
+   gap: 1rem;
+   padding: 1rem 2rem;
+   .textarea{
+    width: 40%;
+    margin-top: 2rem;
+    p{
+     font-size: 1.7rem;
+     text-align: justify;
+    }
+   }
+   .imagearea{
+    width: 60%;
+    margin: 10rem auto;
+    img{
+     max-width: 750px;
+     width: 450px;
+     padding: 1rem;
+    }
+   }
+  }
+  .hot{
+   // padding-top: 2rem;
+   margin-top: -10rem;
+  }
+  .discountedarea{
+   margin: 2rem 3rem;
+   .cardarea{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+   }
+  }
+ }
 
  @media (max-width:576px){
   .landing-container{
@@ -135,7 +180,7 @@ main{
     }
     p{
      font-size: 1rem;
-     padding: .5rem .5rem;
+     padding: 1.2rem .5rem;
      text-align: justify;
     }
    }
@@ -167,38 +212,36 @@ main{
    }
   }
  } //end of media query
- @media(max-width:884px){
+ 
+ @media (max-width:359px){
+
   .landing-container{
-   height: 100vh;
-   gap: 1rem;
-   padding: 1rem 2rem;
+   height: 90vh;
+   padding: 1rem;
    .textarea{
-    width: 40%;
-    margin-top: 2rem;
+    width: 100%;
+    margin-top: 0;
+    h3{
+     font-size: 3.4rem;
+     text-align: center;
+    }
     p{
-     font-size: 1.7rem;
+     font-size: .8rem;
      text-align: justify;
+    }
+    button{
+     margin: auto;
     }
    }
    .imagearea{
-    width: 60%;
-    margin: 10rem auto;
-    img{
-     max-width: 750px;
-     width: 450px;
-     padding: 1rem;
-    }
+    display: none;
    }
   }
   .hot{
-   margin-top: -9.8rem;
+   margin-top: -5rem;
+   height: 7rem;
   }
-  .discountedarea{
-   margin: 2rem 3rem;
-   .cardarea{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-   }
-  }
- }
+ } //end of media query
+
+
 }
