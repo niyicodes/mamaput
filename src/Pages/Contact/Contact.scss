@@ -32,5 +32,22 @@ main{
     font-style: italic;
    }
   }
+  button{
+   background-color: #F5AC3A!important;
+   color: white;
+  }
+ }
+
+ @media(max-width: 884px){
+  margin: 2rem;
+  p{
+   width: 90%;
+   font-size: 1.3rem;
+  }
+  form{
+   max-width: 100%;
+   width: 100%;
+   margin: 2rem 0;
+  }
  }
 }
