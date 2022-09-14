@@ -158,7 +158,7 @@ main{
   }
   .discountedarea{
    margin: 1rem 3rem;
-   overflow-y: hidden;
+   // overflow-x: smooth;
    .cardarea{
     grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
