@@ -5,7 +5,7 @@ import './HomePage.scss'
 
 const HomePage = () => {
  return (
-  <main>
+  <main className='home-page'>
 
    <div className="landing-container">
     <div className="textarea">

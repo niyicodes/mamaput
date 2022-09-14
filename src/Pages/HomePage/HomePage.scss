@@ -1,4 +1,4 @@
-main{
+.home-page{
  max-width: 100%;
 
  .landing-container{
@@ -42,6 +42,7 @@ main{
     border-radius: 15px;
     border: none;
     outline: none;
+    z-index: 1000;
    
 
     &:hover{
