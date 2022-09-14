@@ -7,6 +7,7 @@ import Contact from './Pages/Contact/Contact';
 import MenuPage from './Pages/MenuPage/MenuPage';
 import Orders from './Pages/Orders/Orders';
 import SignInSignUp from './Pages/SignInSignUp/SignInSignUp';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path='/orders' element={<Orders />}/>
       <Route path='/signIn-signUp' element={<SignInSignUp />}/>
      </Routes>
+     <Footer />
     </div>
   );
 }
