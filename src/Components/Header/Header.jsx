@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom'
 import './Header.scss'
 import {BsPersonCircle} from 'react-icons/bs'
 import {GiHotMeal} from 'react-icons/gi'
+import CartIcon from '../CartIcon/CartIcon'
+import CartDropdown from '../CartDropdown/CartDropdown'
 
-const Header = () => {
+const Header = ({hidden}) => {
  const [click, setClick] = useState(false);
 
  const handleClick = () => setClick(!click);
@@ -20,8 +22,9 @@ const Header = () => {
      <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
     </div>
 
-    <li className="nav-item">
-      <NavLink to='/cart'  className="nav-mobile-links icons"><GiHotMeal /></NavLink> 
+    <li className="nav-item mobile">
+      {/* <NavLink to='/cart'  className="nav-mobile-links icons"><GiHotMeal /></NavLink>  */}
+      <CartIcon id="nav-mobile-links" />
      </li>
     
     <div className="searchinput">
@@ -46,10 +49,12 @@ const Header = () => {
       <NavLink to='/signIn-signUp' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><BsPersonCircle /></NavLink>
      </li>
      <li className="nav-item">
-      <NavLink to='/cart' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><GiHotMeal /></NavLink> 
+      {/* <NavLink to='/cart' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><CartIcon /></NavLink>  */}
+      <CartIcon activeclassname="active" className="nav-links icons"/>
      </li>
     </ul>
    </nav>
+   {hidden ? null : <CartDropdown />}
   </header>
  )
 }

@@ -23,7 +23,11 @@
   font-family: 'Courgette', cursive;
  }
 
- .nav-mobile-links{
+ .mobile{
+  display: none!important;
+ }
+
+ #nav-mobile-links{
   display: none;
  }
 
@@ -82,14 +86,17 @@
   .search{
    display: none;
   }
-
-  .nav-mobile-links{
-   display: block;
+  .mobile{
+   display: block!important;
+  }
+  
+ .cart-icon{
+   display: block!important;
    position: absolute;
    top: 0;
    right: 0;
-   transform: translate(-10%, 50%);
-   font-size: 1.8rem;
+   transform: translate(20%, 40%);
+   font-size: 2.5rem;
    color: white;
    cursor: pointer;
   }
