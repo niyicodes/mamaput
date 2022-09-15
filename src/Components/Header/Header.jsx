@@ -19,6 +19,10 @@ const Header = () => {
     <div className="menu-icon" onClick={handleClick}>
      <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
     </div>
+
+    <li className="nav-item">
+      <NavLink to='/cart'  className="nav-mobile-links icons"><GiHotMeal /></NavLink> 
+     </li>
     
     <div className="searchinput">
      <input 
@@ -42,7 +46,7 @@ const Header = () => {
       <NavLink to='/signIn-signUp' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><BsPersonCircle /></NavLink>
      </li>
      <li className="nav-item">
-      <NavLink to='/history' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><GiHotMeal /></NavLink> 
+      <NavLink to='/cart' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><GiHotMeal /></NavLink> 
      </li>
     </ul>
    </nav>

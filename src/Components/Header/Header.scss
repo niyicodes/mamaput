@@ -23,6 +23,10 @@
   font-family: 'Courgette', cursive;
  }
 
+ .nav-mobile-links{
+  display: none;
+ }
+
  .search{
   display: block;
   align-self: center;
@@ -78,6 +82,18 @@
   .search{
    display: none;
   }
+
+  .nav-mobile-links{
+   display: block;
+   position: absolute;
+   top: 0;
+   right: 0;
+   transform: translate(-10%, 50%);
+   font-size: 1.8rem;
+   color: white;
+   cursor: pointer;
+  }
+
   .nav-menu {
    display: flex;
    flex-direction: column;
@@ -113,15 +129,15 @@
    position: absolute;
    top: 0;
    left: 0;
-   transform: translate(5%, 50%);
+   transform: translate(50%, 50%);
   }
 
   .menu-icon {
    display: block;
    position: absolute;
    top: 0;
-   right: 0;
-   transform: translate(-100%, 60%);
+   left: 0;
+   transform: translate(50%, 50%);
    font-size: 1.8rem;
    cursor: pointer;
   }
