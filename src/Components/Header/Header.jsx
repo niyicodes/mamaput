@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Header.scss'
 import {BsPersonCircle} from 'react-icons/bs'
-import {GiHotMeal} from 'react-icons/gi'
 import CartIcon from '../CartIcon/CartIcon'
 import CartDropdown from '../CartDropdown/CartDropdown'
+import {connect} from 'react-redux'
 
 const Header = ({hidden}) => {
  const [click, setClick] = useState(false);
@@ -23,8 +23,7 @@ const Header = ({hidden}) => {
     </div>
 
     <li className="nav-item mobile">
-      {/* <NavLink to='/cart'  className="nav-mobile-links icons"><GiHotMeal /></NavLink>  */}
-      <CartIcon id="nav-mobile-links" />
+      <CartIcon />
      </li>
     
     <div className="searchinput">
@@ -49,8 +48,7 @@ const Header = ({hidden}) => {
       <NavLink to='/signIn-signUp' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><BsPersonCircle /></NavLink>
      </li>
      <li className="nav-item">
-      {/* <NavLink to='/cart' activeclassname="active" className="nav-links icons" onClick={closeMobileMenu}><CartIcon /></NavLink>  */}
-      <CartIcon activeclassname="active" className="nav-links icons"/>
+      <CartIcon />
      </li>
     </ul>
    </nav>
@@ -59,4 +57,8 @@ const Header = ({hidden}) => {
  )
 }
 
-export default Header;
+const mapStateToProps = ({cart: {hidden}}) => ({
+  hidden
+})
+
+export default connect(mapStateToProps)(Header);
