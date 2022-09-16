@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 import './MenuPage.scss'
 
 const MenuPage = () => {
@@ -7,17 +8,18 @@ const MenuPage = () => {
    <div className="menu">
     <figure>
      <img src="asset/Egusi.png" alt="Egus1i" />
-     <figcaption>soups</figcaption>
+     <Link to='/foodmenu/soups'>soups</Link>
     </figure>
     <figure>
      <img src="asset/jollof.png" alt="Jollof" />
-     <figcaption>rice</figcaption>
+     <Link to='/foodmenu/rice'>rice</Link>
     </figure>
     <figure>
      <img src="asset/moi-moi.png" alt="moimoi" />
-     <figcaption>bean product</figcaption>
+     <Link to='/foodmenu/others'>others</Link>
     </figure>
    </div>
+   <Outlet />
   </main>
  )
 }
