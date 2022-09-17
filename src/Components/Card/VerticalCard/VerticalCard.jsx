@@ -25,7 +25,7 @@ const VerticalCard = ({
     <h4 className="food-price">
      {discount && (
       <span className="now-price">
-       {price - (discount / 100) * price}
+       {Math.round(price - (discount / 100) * price)}
       </span>
      )}
      {discount ? (

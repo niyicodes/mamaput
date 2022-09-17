@@ -54,6 +54,34 @@ const dataDetails = [
    { id: 2, name: "amala", price: 100 },
    { id: 3, name: "fufu", price: 200 },
   ],
+ },
+ {
+  id: 5,
+  name: "Efo Riro",
+  description: "Lorem",
+  image: "asset/Eforiro.png",
+  rating: 4,
+  price: 5000,
+  discount: 60,
+  addOns: [
+   { id: 1, name: "eba", price: 500, qty: 0 },
+   { id: 2, name: "amala", price: 100 },
+   { id: 3, name: "fufu", price: 200 },
+  ],
+ },
+ {
+  id: 6,
+  name: "Efo Riro",
+  description: "Lorem",
+  image: "asset/Eforiro.png",
+  rating: 4,
+  price: 5000,
+  discount: 60,
+  addOns: [
+   { id: 1, name: "eba", price: 500, qty: 0 },
+   { id: 2, name: "amala", price: 100 },
+   { id: 3, name: "fufu", price: 200 },
+  ],
  }
 ];
 
