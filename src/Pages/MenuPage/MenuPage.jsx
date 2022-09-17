@@ -8,15 +8,15 @@ const MenuPage = () => {
    <div className="menu">
     <figure>
      <img src="asset/Egusi.png" alt="Egus1i" />
-     <Link to='/foodmenu/soups'>soups</Link>
+     <Link className="menu-link" to='/foodmenu/soups'>soups</Link>
     </figure>
     <figure>
      <img src="asset/jollof.png" alt="Jollof" />
-     <Link to='/foodmenu/rice'>rice</Link>
+     <Link className="menu-link" to='/foodmenu/rice'>rice</Link>
     </figure>
     <figure>
      <img src="asset/moi-moi.png" alt="moimoi" />
-     <Link to='/foodmenu/others'>others</Link>
+     <Link className="menu-link" to='/foodmenu/others'>others</Link>
     </figure>
    </div>
    <Outlet />

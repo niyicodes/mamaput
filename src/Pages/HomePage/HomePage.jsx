@@ -28,7 +28,9 @@ const HomePage = () => {
      <CustomButton buttonName="more ➡" />
     </div>
     <div className="cardarea">
-     <VerticalCard />
+     <VerticalCard 
+          
+     />
      <VerticalCard />
      <VerticalCard />
      <VerticalCard />

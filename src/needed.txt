@@ -32,3 +32,6 @@ const handleChange = event => {
  #300017
 
  "more ➡"
+
+ 576px for mobile
+ 768px for tablet

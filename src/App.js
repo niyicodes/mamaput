@@ -9,8 +9,8 @@ import Orders from './Pages/Orders/Orders';
 import SignInSignUp from './Pages/SignInSignUp/SignInSignUp';
 import Footer from './Components/Footer/Footer';
 import Soup from './Pages/MenuPage/Soup/Soup';
-import Rice from './Pages/MenuPage/Rice/Rice';
-import OtherFood from './Pages/MenuPage/Others/OtherFood';
+// import Rice from './Pages/MenuPage/Rice/Rice';
+// import OtherFood from './Pages/MenuPage/Others/OtherFood';
 
 
 function App() {
@@ -20,11 +20,8 @@ function App() {
      <Routes>
       <Route exact path='/' element={<HomePage />}/>
       <Route path='/contactUs' element={<Contact />}/>
-      <Route path='/foodmenu' element={<MenuPage />}>
-        <Route path='soups' element={<Soup />}/>
-        <Route path='rice' element={<Rice />}/>
-        <Route path='others' element={<OtherFood />}/>
-      </Route>
+      <Route path='/foodmenu' element={<MenuPage />}/>
+      <Route path='/foodmenu/:name' element={<Soup />}/>
       <Route path='/orders' element={<Orders />}/>
       <Route path='/signIn-signUp' element={<SignInSignUp />}/>
      </Routes>
