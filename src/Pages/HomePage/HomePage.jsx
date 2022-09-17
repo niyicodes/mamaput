@@ -3,7 +3,7 @@ import CustomButton from "../../Components/Button/CustomButton";
 import VerticalCard from "../../Components/Card/VerticalCard/VerticalCard";
 import "./HomePage.scss";
 import data from "../../data";
-
+import oneTime from "../../oneTime";
 const HomePage = () => {
  return (
   <main className="home-page">
@@ -30,17 +30,17 @@ const HomePage = () => {
     </div>
     <div className="cardarea">
      {data.map(({ id, image, name, description, rating, price, discount }) => {
-      return(
-       <VerticalCard 
-       key={id}
-       image={image}
-       name={name}
-       description={description}
-       rating={rating}
-       price={price}
-       discount={discount}
+      return (
+       <VerticalCard
+        key={id}
+        image={image}
+        name={name}
+        description={description}
+        rating={rating}
+        price={price}
+        discount={discount}
        />
-      )
+      );
      })}
     </div>
    </div>
@@ -68,10 +68,18 @@ const HomePage = () => {
      <CustomButton buttonName="more ➡" />
     </div>
     <div className="cardarea">
-     <VerticalCard />
-     <VerticalCard />
-     <VerticalCard />
-     <VerticalCard />
+     {oneTime.map(({ id, image, name, description, rating, price }) => {
+      return(
+       <VerticalCard 
+        key={id}
+        image={image}
+        name={name}
+        description={description}
+        rating={rating}
+        price={price}
+       />
+      )
+     })}
     </div>
    </div>
   </main>
