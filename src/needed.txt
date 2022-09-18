@@ -35,3 +35,4 @@ const handleChange = event => {
 
  576px for mobile
  768px for tablet
+ ₦

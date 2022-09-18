@@ -20,18 +20,18 @@ const VerticalCard = ({
    <div className="food-details">
     <div className="food-name">
      <h3>{name}</h3>
-     <span>-{discount}%</span>
+     {discount ? <span>-{discount}%</span> : null}
     </div>
     <h4 className="food-price">
      {discount && (
       <span className="now-price">
-       {Math.round(price - (discount / 100) * price)}
+       ₦{Math.round(price - (discount / 100) * price)}
       </span>
      )}
      {discount ? (
-      <del className="former-price">{price}</del>
+      <del className="former-price">₦{price}</del>
      ) : (
-      <p className="former-price">{price}</p>
+      <p className="former-price">₦{price}</p>
      )}
     </h4>
     <h3 className="food-rating">
@@ -44,9 +44,7 @@ const VerticalCard = ({
       {rating > 4 && <AiFillHeart />}
      </span>
     </h3>
-    <p className="food-ins">
-     {description}
-    </p>
+    <p className="food-ins">{description}</p>
    </div>
    <CustomButton buttonName="😋 ORDER" />
   </div>

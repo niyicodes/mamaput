@@ -17,7 +17,7 @@ const HomePage = () => {
      <CustomButton buttonName="Continue" />
     </div>
     <figure className="imagearea">
-     <img src="asset/Egus1i.png" alt="Egusi" />
+     <img src="asset/Egus1i.png" alt="Egusi" className="homescreenSpin" />
     </figure>
    </div>
 
