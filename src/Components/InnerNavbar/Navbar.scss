@@ -1,19 +1,17 @@
-div{
+.mini-navbar{
  width: 400px;
  margin: 1rem .2rem;
 
- ul{
+ .mini-navbar-nav{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
   list-style: none;
- }
- 
- a{
-  color: black;
-  text-decoration: none;
-  
+  a{
+   color: black;
+   text-decoration: none;
+  }
  }
 }

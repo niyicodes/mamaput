@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom'
 import './Navbar.scss'
 const Navbar = () => {
  return (
-  <div>
-   <ul>
+  <div className='mini-navbar'>
+   <ul className="mini-navbar-nav">
     <li>
      <NavLink to="/" className="navlink">Home ➡</NavLink>
     </li>
