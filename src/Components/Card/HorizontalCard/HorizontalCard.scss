@@ -1,0 +1,98 @@
+.horizontal-food-card{
+ display: flex;
+ flex-direction: row;
+ border-radius: 20px;
+ outline: none;
+ background-color: #F0F3F5;
+ max-width: 400px;
+ width: auto;
+ height: auto;
+ padding-bottom: .7rem;
+ 
+ .horizontal-food-image{
+  background-color:  #300017;
+  padding: 1rem;
+  
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  img{
+   display: block;
+   width: 150px;
+   margin:0 auto;
+   &:hover{
+    transform: scale(1.1);
+    object-fit: contain;
+   }
+  }
+ }
+
+ .horizontal-food-details{
+  padding: 1rem;
+  background-color: red;
+  width: 100%;
+  .horizontal-food-name{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding-bottom: .5rem ;
+   h3{
+    font-size: 1.5rem;
+    color: black;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 200px; 
+    height: 1.4em; 
+    white-space: nowrap;
+   }
+   span{
+    color:#B00020 ;
+    font-size: 1.3rem;
+   }
+  }
+  .horizontal-food-price{
+   display: flex;
+   flex-direction: row;
+   gap: 2rem;
+   font-size: 1.3rem;
+   padding-bottom: .7rem;
+  }
+  .horizontal-food-rating{
+   font-size: 1.3rem;
+   color: black;
+   padding-bottom: .7rem;
+   span{
+    color:#F5AC3A;
+    align-items: center;
+    justify-content: center;
+   }
+  }
+  .horizontal-food-ins{
+   font-size: 1.3rem;
+   word-spacing: .1rem;
+   line-height: 1.5;
+   text-align: left;
+   text-overflow: ellipsis;
+   overflow: hidden; 
+   height: 150px;
+  }
+ }
+ button{
+  margin: .5rem auto;
+  background-color: white;
+  color: #F5AC3A;
+  border: 5px solid #F5AC3A;
+  border-radius: 8px;
+  margin: auto auto 1rem auto;
+  bottom: 0;
+ }
+
+ @media (max-width: 359px){
+  width: 90%;
+ }
+
+ @media (max-width: 576px){
+  max-width: 360px;
+  width: 95%;
+ }
+}
