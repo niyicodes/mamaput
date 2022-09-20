@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import HorizontalCard from "../../../Components/Card/HorizontalCard/HorizontalCard";
+import Navbar from "../../../Components/InnerNavbar/Navbar";
 import "./Soup.scss";
 
 const Soup = () => {
@@ -21,6 +23,8 @@ const Soup = () => {
      border: "1px solid #ccc",
     }}
    >
+     <Navbar />
+     <HorizontalCard />
     {addOns &&
      addOns.map((addon, i) => {
       return (
