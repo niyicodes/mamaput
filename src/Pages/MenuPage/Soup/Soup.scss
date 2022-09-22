@@ -1,3 +1,31 @@
 .soup-page{
  margin: 35px 25px;
+
+ .soup-info{
+  margin: 1rem 0;
+  padding: 1rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  h3{
+   text-transform: uppercase;
+   font-size: 1.5rem;
+  }
+
+  p{
+   font-size: 1.1rem;
+  }
+ }
+ .meals{
+  
+  .meal-section{
+   display: grid;
+   grid-template-columns:repeat(2, 1fr) ;
+   row-gap: 15px;
+  }
+ }
 }

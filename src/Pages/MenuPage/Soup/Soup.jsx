@@ -2,23 +2,28 @@ import React, { useState } from "react";
 import HorizontalCard from "../../../Components/Card/HorizontalCard/HorizontalCard";
 import Navbar from "../../../Components/InnerNavbar/Navbar";
 import "./Soup.scss";
-import menu from '../../../Menu'
+import menu from "../../../Menu";
+import InputRange from "../../../Components/Range/InputRange";
+import CustomButton from "../../../Components/Button/CustomButton";
+
 const Soup = () => {
-  return (
+ return (
   <div className="soup-page">
    <Navbar />
-    <div className="soup-info">
-      <div className="soupdetails">
-        <h3>soups</h3>
-        <p>{menu.length} meals found</p>
-      </div>
-      <div className="soupprice-range">
-        
-      </div>
+   <div className="soup-info">
+    <div className="soupdetails">
+     <h3>soups</h3>
+     <p>{menu.length} meals found</p>
     </div>
-   {menu.map(({ id, image, name, description, rating, price, addOns }) =>{
-     return(
-       <HorizontalCard 
+    <div className="soupprice-range">
+     <InputRange />
+    </div>
+   </div>
+   <div className="meals">
+    <div className="meal-section">
+     {menu.map(({ id, image, name, description, rating, price, addOns }) => {
+      return (
+       <HorizontalCard
         key={id}
         image={image}
         name={name}
@@ -27,8 +32,11 @@ const Soup = () => {
         price={price}
         addOns={addOns}
        />
-     )
-   })}
+      );
+     })}
+    </div>
+    <CustomButton buttonName="LOAD MORE" />
+   </div>
   </div>
  );
 };

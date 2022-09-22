@@ -1,8 +1,8 @@
 .price-range {
  display: flex;
  flex-direction: row;
- justify-content: space-between;
- margin: 5rem;
+ justify-content: center;
+ gap: 1rem;
 
  input[type="range"] {
   -webkit-appearance: none;
@@ -32,7 +32,7 @@
   margin-top: -10px;
  }
  input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #8d990d;
+  background: #300017;
  }
  input[type="range"]::-moz-range-track {
   width: 100%;
@@ -61,7 +61,5 @@
   border-width: 16px 0;
   color: transparent;
  }
- 
- 
- 
+  
 }
