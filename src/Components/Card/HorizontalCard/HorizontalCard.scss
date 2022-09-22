@@ -28,9 +28,15 @@
  }
 
  .horizontal-food-details{
+  display: flex;
+  flex-direction: row;
   padding: 1rem;
   background-color: red;
   width: 100%;
+  .horizontal-right{
+   display: flex;
+   flex-direction: column;
+  }
   .horizontal-food-name{
    display: flex;
    flex-direction: row;
@@ -78,6 +84,7 @@
   }
  }
  button{
+  display: block;
   margin: .5rem auto;
   background-color: white;
   color: #F5AC3A;
