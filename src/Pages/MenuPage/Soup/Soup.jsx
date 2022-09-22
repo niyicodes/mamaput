@@ -5,9 +5,17 @@ import "./Soup.scss";
 import menu from '../../../Menu'
 const Soup = () => {
   return (
-  <div>
+  <div className="soup-page">
    <Navbar />
-
+    <div className="soup-info">
+      <div className="soupdetails">
+        <h3>soups</h3>
+        <p>{menu.length} meals found</p>
+      </div>
+      <div className="soupprice-range">
+        
+      </div>
+    </div>
    {menu.map(({ id, image, name, description, rating, price, addOns }) =>{
      return(
        <HorizontalCard 

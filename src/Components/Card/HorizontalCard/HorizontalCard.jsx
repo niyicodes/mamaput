@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillHeart } from "react-icons/ai";
 import CustomButton from "../../Button/CustomButton";
+import CheckBox from "../../CheckBox/CheckBox";
 import "./HorizontalCard.scss";
 
 const HorizontalCard = ({
@@ -38,12 +39,18 @@ const HorizontalCard = ({
      <p className="horizontal-food-ins">{description}</p>
     </div>
     <div className="horizontal-right">
-     <input type="checkbox" name="" id="first" />
-     <label htmlFor="first">eba</label>
-     <input type="checkbox" name="" id="second" />
-     <label htmlFor="second">fufu</label>
-     <input type="checkbox" name="" id="third" />
-     <label htmlFor="third">poundedyam</label>
+     <>
+     {addOns &&
+      addOns.map((addOn) => {
+       return(
+        <CheckBox 
+        name={addOn.name}
+        key={addOn.name}
+        />
+       )
+      })
+     }
+     </>
      <CustomButton buttonName="😋 ORDER" />
     </div>
    </div>

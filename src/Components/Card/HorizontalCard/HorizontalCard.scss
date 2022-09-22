@@ -4,8 +4,8 @@
  border-radius: 20px;
  outline: none;
  background-color: #F0F3F5;
- max-width: 400px;
- width: auto;
+ max-width: 700px;
+ width: 600px;
  height: auto;
  padding-bottom: .7rem;
  
@@ -30,8 +30,8 @@
  .horizontal-food-details{
   display: flex;
   flex-direction: row;
+  gap: 1rem;
   padding: 1rem;
-  background-color: red;
   width: 100%;
   .horizontal-right{
    display: flex;
@@ -43,7 +43,7 @@
    justify-content: space-between;
    padding-bottom: .5rem ;
    h3{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: black;
     text-overflow: ellipsis;
     overflow: hidden; 
@@ -74,9 +74,9 @@
    }
   }
   .horizontal-food-ins{
-   font-size: 1.3rem;
-   word-spacing: .1rem;
+   font-size: 1rem;
    line-height: 1.5;
+   width: 90%;
    text-align: left;
    text-overflow: ellipsis;
    overflow: hidden; 
@@ -84,14 +84,11 @@
   }
  }
  button{
-  display: block;
-  margin: .5rem auto;
   background-color: white;
   color: #F5AC3A;
   border: 5px solid #F5AC3A;
   border-radius: 8px;
   margin: auto auto 1rem auto;
-  bottom: 0;
  }
 
  @media (max-width: 359px){
@@ -99,7 +96,41 @@
  }
 
  @media (max-width: 576px){
-  max-width: 360px;
+  max-width: 100%;
   width: 95%;
+  .horizontal-food-image{
+   width: 35%;
+  }
+  .horizontal-food-details{
+   gap: 10px;
+   width: 80%;
+   justify-content: space-between;
+   padding: 10px;
+   .horizontal-right{
+    margin-left: -70px;
+    label{
+     font-size: 14px;
+    }
+    button{
+     padding: 5px 10px;
+    }
+   }
+   .horizontal-food-name{
+    h3{
+     font-size: 15px;
+    }
+   }
+   .horizontal-food-price{
+    font-size: 15px;
+   }
+   .horizontal-food-rating{
+    font-size: 15px;
+   }
+   .horizontal-food-ins{
+    font-size: 14px;
+    text-align: justify;
+    width: 60%;
+   }
+  }
  }
 }
