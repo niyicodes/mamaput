@@ -1,5 +1,9 @@
 .soup-page{
+ display: flex;
+ flex-direction: column;
  margin: 35px 25px;
+ // align-items: center;
+ // justify-content: center;
 
  .soup-info{
   margin: 1rem 0;
@@ -21,11 +25,19 @@
   }
  }
  .meals{
-  
+  margin: 1.5rem 5rem;
+  gap: 1rem;
   .meal-section{
    display: grid;
    grid-template-columns:repeat(2, 1fr) ;
+   gap: 1rem;
    row-gap: 15px;
+  }
+  button{
+   display: block;
+   // justify-content: center;
+   // align-items: center;
+   margin: 2rem auto;
   }
  }
 }

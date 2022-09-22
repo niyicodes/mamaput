@@ -33,10 +33,17 @@
   gap: 1rem;
   padding: 1rem;
   width: 100%;
+
   .horizontal-right{
    display: flex;
    flex-direction: column;
+   justify-content: space-between;
+   button{
+    display: block;
+    margin-bottom: 0;
+   }
   }
+
   .horizontal-food-name{
    display: flex;
    flex-direction: row;
@@ -88,7 +95,7 @@
   color: #F5AC3A;
   border: 5px solid #F5AC3A;
   border-radius: 8px;
-  margin: auto auto 1rem auto;
+  padding: 1rem;
  }
 
  @media (max-width: 359px){

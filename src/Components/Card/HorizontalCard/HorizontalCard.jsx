@@ -39,7 +39,7 @@ const HorizontalCard = ({
      <p className="horizontal-food-ins">{description}</p>
     </div>
     <div className="horizontal-right">
-     <>
+     <div className="addons">
      {addOns &&
       addOns.map((addOn) => {
        return(
@@ -50,7 +50,7 @@ const HorizontalCard = ({
        )
       })
      }
-     </>
+     </div>
      <CustomButton buttonName="😋 ORDER" />
     </div>
    </div>
