@@ -32,11 +32,12 @@
    }
 
    button{
+    display: block;
     color: black;
     font-size: 1.2rem;
     margin: 0 auto;
     cursor: pointer;
-    padding: .3rem 5rem;
+    padding: 1rem 5rem;
     align-self: center;
     background-color:#FA9E0B ;
     border-radius: 15px;
@@ -134,7 +135,7 @@
     background-color: #FA9E0B;
     cursor: pointer;
     color: black;
-    padding: .1rem 4rem;
+    padding: 1rem 3rem;
    }
   }
  }

@@ -9,8 +9,7 @@ import Orders from './Pages/Orders/Orders';
 import SignInSignUp from './Pages/SignInSignUp/SignInSignUp';
 import Footer from './Components/Footer/Footer';
 import Soup from './Pages/MenuPage/Soup/Soup';
-// import Rice from './Pages/MenuPage/Rice/Rice';
-// import OtherFood from './Pages/MenuPage/Others/OtherFood';
+
 
 
 function App() {

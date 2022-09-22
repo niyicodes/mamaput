@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import HorizontalCard from "../../../Components/Card/HorizontalCard/HorizontalCard";
 import Navbar from "../../../Components/InnerNavbar/Navbar";
 import "./Soup.scss";
-import menu from "../../../Menu";
+import menu from "../../../Data/menu";
 import InputRange from "../../../Components/Range/InputRange";
 import CustomButton from "../../../Components/Button/CustomButton";
 
@@ -43,31 +43,12 @@ const Soup = () => {
 
 export default Soup;
 
-// {addOns &&
-//   addOns.map((addon, i) => {
-//    return (
-//     <>
-//      <input
-//       type="checkbox"
-//       name={addon.name}
+
 //       value={addon.price}
 //       onChange={(e) =>
 //        setCurrentItemPrice(+currentItemPrice + +e.target.value)
 //       }
-//      />{" "}
-//      <label>{addon.name}</label>
-//      <br />
-//     </>
-//    );
-//   })}
-
+//     
 // const [currentItemPrice, setCurrentItemPrice] = useState(5000);
-//  const [addOnPrice, setAddOnPrice] = useState(0);
+// const [addOnPrice, setAddOnPrice] = useState(0);
 
-//  const addOns = [
-//   { id: 1, name: "eba", price: 500 },
-//   { id: 2, name: "amala", price: 100 },
-//   { id: 3, name: "fufu", price: 200 },
-//  ];
-
-//  console.log(currentItemPrice);

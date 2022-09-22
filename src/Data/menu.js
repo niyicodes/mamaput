@@ -3,7 +3,7 @@ const dataDetails = [
   id: 1,
   name: "Efo Riro + Shrimp",
   description: "It is prepared with vegetables and stockfish palm oil, pepper, locust bean. It goes with different type of swallow.",
-  image: "asset/Eforiro1.png",
+  image: "/asset/Eforiro1.png",
   rating: 4,
   price: 7500,
   addOns: [
@@ -17,7 +17,7 @@ const dataDetails = [
   id: 2,
   name: "Egusi soup",
   description: "It is prepared with vegetables, egusi (melon), palm oil with assorted meat. It goes with different type of swallow.",
-  image: "asset/EgusiM.png",
+  image: "/asset/EgusiM.png",
   rating: 5,
   price: 3000,
   addOns: [
@@ -30,7 +30,7 @@ const dataDetails = [
   id: 3,
   name: "Ogbono soup",
   description: "Ogbono soup is a delicious Nigerian viscous soup made with ogbono seeds; it is referred to as draw soup because of its soft.",
-  image: "asset/Ogbonlo.png",
+  image: "/asset/Ogbonlo.png",
   rating: 4,
   price: 5500
  },
@@ -38,7 +38,7 @@ const dataDetails = [
   id: 4,
   name: "Okra soup",
   description: "It is prepared with vegetables, okra fingers, crayfish, palm oil with assorted meat. It goes with different type of swallow.",
-  image: "asset/okro.png",
+  image: "/asset/okro.png",
   rating: 3,
   price: 8000,
   addOns: [
@@ -49,7 +49,7 @@ const dataDetails = [
   id: 5,
   name: "Afang soup",
   description: "This is made with afang leaves (ukazi) and water leaves, this different leaves combines to make a delicious looking afang soup.",
-  image: "asset/Afang.png",
+  image: "/asset/Afang.png",
   rating: 4,
   price: 6000,
   addOns: [
@@ -62,7 +62,7 @@ const dataDetails = [
   id: 6,
   name: "Tuwo Shinkafa + Miyan kuka",
   description: " It is a thick pudding prepared from a local rice that is soft and sticky, and is served with  Miyan kuka soup.",
-  image: "asset/TuwoShinkafa1.png",
+  image: "/asset/TuwoShinkafa1.png",
   rating: 4,
   price: 4500
  }

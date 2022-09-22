@@ -2,8 +2,8 @@ import React from "react";
 import CustomButton from "../../Components/Button/CustomButton";
 import VerticalCard from "../../Components/Card/VerticalCard/VerticalCard";
 import "./HomePage.scss";
-import data from "../../data";
-import oneTime from "../../oneTime";
+import data from "../../Data/data";
+import oneTime from "../../Data/oneTime";
 const HomePage = () => {
  return (
   <main className="home-page">
