@@ -1,5 +1,7 @@
 import React from "react";
 import { AiFillHeart } from "react-icons/ai";
+import { connect } from "react-redux";
+import { addItem } from "../../../Redux/Cart/cartActions";
 import CustomButton from "../../Button/CustomButton";
 import CheckBox from "../../CheckBox/CheckBox";
 import "./HorizontalCard.scss";
@@ -12,6 +14,7 @@ const HorizontalCard = ({
  rating,
  price,
  addOns,
+ addItem
 }) => {
  return (
   <div className="horizontal-food-card">
@@ -40,22 +43,33 @@ const HorizontalCard = ({
     </div>
     <div className="horizontal-right">
      <div className="addons">
-     {addOns &&
-      addOns.map((addOn) => {
-       return(
-        <CheckBox 
-        name={addOn.name}
-        key={addOn.name}
-        />
-       )
-      })
-     }
+      {addOns &&
+       addOns.map((addOn) => {
+        return <CheckBox name={addOn.name} key={addOn.name} />;
+       })}
      </div>
-     <CustomButton buttonName="😋 ORDER" />
+     <CustomButton
+      buttonName="😋 ORDER"
+      onClick={() =>
+       addItem({
+        id,
+        image,
+        name,
+        description,
+        rating,
+        price,
+        addOns,
+       })
+      }
+     />
     </div>
    </div>
   </div>
  );
 };
 
-export default HorizontalCard;
+const mapDispatchToProps = (dispatch) => ({
+ addItem: (item) => dispatch(addItem(item)),
+});
+
+export default connect(null, mapDispatchToProps)(HorizontalCard);

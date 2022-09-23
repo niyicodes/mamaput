@@ -1,5 +1,7 @@
 import React from "react";
 import { AiFillHeart } from "react-icons/ai";
+import { connect } from "react-redux";
+import { addItem } from "../../../Redux/Cart/cartActions";
 import CustomButton from "../../Button/CustomButton";
 import "./VerticalCard.scss";
 
@@ -11,9 +13,10 @@ const VerticalCard = ({
  rating,
  price,
  discount,
+ addItem,
 }) => {
  return (
-  <div className="food-card">
+  <div className="food-card" id={id}>
    <figure className="food-image">
     <img src={image} alt={name} />
    </figure>
@@ -46,9 +49,27 @@ const VerticalCard = ({
     </h3>
     <p className="food-ins">{description}</p>
    </div>
-   <CustomButton buttonName="😋 ORDER" />
+   <CustomButton
+    buttonName="😋 ORDER"
+    onClick={() =>
+     addItem({
+      id,
+      image,
+      name,
+      description,
+      rating,
+      price,
+      discount,
+      addItem,
+     })
+    }
+   />
   </div>
  );
 };
 
-export default VerticalCard;
+const mapDispatchToProps = (dispatch) => ({
+ addItem: (item) => dispatch(addItem(item)),
+});
+
+export default connect(null, mapDispatchToProps)(VerticalCard);
