@@ -8,9 +8,9 @@ const dataDetails = [
   price: 2000,
   discount: 60,
   addOns: [
-   { id: 1, name: "eba", price: 500, qty: 0 },
-   { id: 2, name: "amala", price: 100 },
-   { id: 3, name: "fufu", price: 200 },
+   { id: 1.1, name: "eba", price: 500, qty: 0 },
+   { id: 1.2, name: "amala", price: 100 },
+   { id: 1.3, name: "fufu", price: 200 },
   ],
  },
  {
@@ -22,9 +22,9 @@ const dataDetails = [
   price: 5000,
   discount: 56,
   addOns: [
-   { id: 1, name: "eba", price: 500, qty: 0 },
-   { id: 2, name: "amala", price: 100 },
-   { id: 3, name: "fufu", price: 200 },
+   { id: 2.1, name: "eba", price: 500, qty: 0 },
+   { id: 2.2, name: "amala", price: 100 },
+   { id: 2.3, name: "fufu", price: 200 },
   ],
  },
  {
@@ -36,9 +36,9 @@ const dataDetails = [
   price: 5000,
   discount: 50,
   addOns: [
-   { id: 1, name: "eba", price: 500, qty: 0 },
-   { id: 2, name: "amala", price: 100 },
-   { id: 3, name: "fufu", price: 200 },
+   { id: 3.1, name: "eba", price: 500, qty: 0 },
+   { id: 3.2, name: "amala", price: 100 },
+   { id: 3.3, name: "fufu", price: 200 },
   ],
  },
  {
@@ -50,9 +50,9 @@ const dataDetails = [
   price: 4000,
   discount: 25,
   addOns: [
-   { id: 1, name: "eba", price: 500, qty: 0 },
-   { id: 2, name: "amala", price: 100 },
-   { id: 3, name: "fufu", price: 200 },
+   { id: 4.1, name: "eba", price: 500, qty: 0 },
+   { id: 4.2, name: "amala", price: 100 },
+   { id: 4.3, name: "fufu", price: 200 },
   ],
  }
 ];

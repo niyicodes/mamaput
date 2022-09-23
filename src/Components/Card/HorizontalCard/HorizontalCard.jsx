@@ -17,7 +17,7 @@ const HorizontalCard = ({
  addItem
 }) => {
  return (
-  <div className="horizontal-food-card">
+  <div className="horizontal-food-card" id={id}>
    <figure className="horizontal-food-image">
     <img src={image} alt={name} />
    </figure>
