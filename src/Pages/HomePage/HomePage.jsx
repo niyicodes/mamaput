@@ -32,6 +32,7 @@ const HomePage = () => {
      {data.map(({ id, image, name, description, rating, price, discount }) => {
       return (
        <VerticalCard
+       id={id}
         key={id}
         image={image}
         name={name}

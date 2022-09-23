@@ -24,6 +24,7 @@ const Soup = () => {
      {menu.map(({ id, image, name, description, rating, price, addOns }) => {
       return (
        <HorizontalCard
+        id={id}
         key={id}
         image={image}
         name={name}
@@ -43,12 +44,10 @@ const Soup = () => {
 
 export default Soup;
 
-
 //       value={addon.price}
 //       onChange={(e) =>
 //        setCurrentItemPrice(+currentItemPrice + +e.target.value)
 //       }
-//     
+//
 // const [currentItemPrice, setCurrentItemPrice] = useState(5000);
 // const [addOnPrice, setAddOnPrice] = useState(0);
-
