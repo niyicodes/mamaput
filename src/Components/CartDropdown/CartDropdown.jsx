@@ -1,34 +1,35 @@
-import React from 'react';
-// import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 // import {useNavigate} from 'react-router-dom'
-import CustomButton from '../Button/CustomButton';
-
-import './CartDropdown.scss';
+import CustomButton from "../Button/CustomButton";
+import CartItem from "../CartItem/cartItem";
+import "./CartDropdown.scss";
 // import {toggleCartHidden} from '../../Redux/Cart/cartActions'
 
-
-
-
-const CartDropdown = () => {
-  // const navigate = useNavigate();
-  return (
-   <div className="cart-dropdown">
-    <div className="cart-items">
-      {/* {
-        cartItems.length ? (
-          cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem}/>)
-        ) : (
-          <span className="empty-message">Your cart is empty</span>
-        )
-      } */}
-    </div> 
-    <CustomButton 
-      // onClick={() => {navigate('/checkout'); dispatch(toggleCartHidden())}}
-      buttonName="Go to checkout"
-    />
+const CartDropdown = ({ cartItems }) => {
+ // const navigate = useNavigate();
+ return (
+  <div className="cart-dropdown">
+   <div className="cart-items">
+    {cartItems.length ? (
+     cartItems.map(({ image, price, name, quantity }) => (
+      <CartItem key={name} item={{ image, price, name, quantity }} />
+     ))
+    ) : (
+     <span className="empty-message">Your cart is empty</span>
+    )}
    </div>
-  )
-}
+   <CustomButton
+    // onClick={() => {navigate('/checkout'); dispatch(toggleCartHidden())}}
+    buttonName="Go to checkout"
+   />
+  </div>
+ );
+};
+
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+ cartItems,
+});
 
 // const mapStateToProps = (state) => ({
 //   cartItems:selectCartItems(state)
@@ -38,4 +39,4 @@ const CartDropdown = () => {
 //   cartItems: selectCartItems
 // })
 
-export default CartDropdown;
+export default connect(mapStateToProps)(CartDropdown);
