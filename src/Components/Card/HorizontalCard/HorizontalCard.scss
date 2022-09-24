@@ -95,6 +95,17 @@
   padding: 1rem;
  }
 
+ @media(max-width:1270px){
+  max-width: 500px;
+  width: 100%;
+  .horizontal-food-image{
+   width: 30%;
+   img{
+    width: 110px;
+   }
+  }
+ }
+
  @media (max-width: 576px) {
   max-width: 100%;
   width: 95%;
