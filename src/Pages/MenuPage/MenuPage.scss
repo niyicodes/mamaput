@@ -1,16 +1,23 @@
-.menu-page{
+.menu-page {
  background-color: #210211;
  color: white;
  font-size: 2rem;
  text-transform: uppercase;
- 
- 
- .menu{
+ height: 75vh;
+ display: grid;
+ justify-content: center;
+ align-content: center;
+ gap: 4px;
+ grid-auto-flow: column;
+
+ .menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 3rem 5rem;
-  
-  figure{
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  figure {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -18,21 +25,37 @@
    max-width: 100%;
    border-right: 4px solid white;
 
-   &:last-child{
+   &:last-child {
     border: none;
    }
 
-   img{
-    width: 70%;
+   img {
+    width: 80%;
     cursor: pointer;
     // border-radius: 30%;
    }
   }
-  .menu-link{
+  .menu-link {
    text-decoration: none;
    color: white;
   }
  }
+ @media (max-width: 428px) {
+  .menu {
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
 
- 
+   figure{
+    border-right: none;
+    border-bottom:3px solid white;
+   img{
+    width: 50%;
+   }
+   }
+   .menu-link{
+    font-size: 16px;
+   }
+  }
+ }
 }
