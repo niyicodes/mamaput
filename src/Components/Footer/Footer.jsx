@@ -29,7 +29,7 @@ const Footer = () => {
      <div className="top">
       <h3>get to know us</h3>
        <ul>
-        <li>sel on mamaput</li>
+        <li>sell on mamaput</li>
         <li>become a distributor</li>
         <li>become a partner</li>
        </ul>

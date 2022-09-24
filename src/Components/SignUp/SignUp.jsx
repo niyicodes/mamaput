@@ -44,7 +44,7 @@ const SignUp = () => {
     email,
    });
   } catch(err){
-   alert(err.message);
+   alert('Please fill in the fields properly and try again');
   }
  }
 
