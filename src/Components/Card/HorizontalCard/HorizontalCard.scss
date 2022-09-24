@@ -95,10 +95,6 @@
   padding: 1rem;
  }
 
- @media (max-width: 428px) {
-  width: 90%;
- }
-
  @media (max-width: 576px) {
   max-width: 100%;
   width: 95%;
@@ -137,4 +133,28 @@
    }
   }
  }
+
+ @media (max-width: 428px) {
+  width: 100%;
+
+  .horizontal-food-image{
+   padding: 5px;
+   img{
+    width: 80px;
+   }
+  }
+
+  .horizontal-food-details{
+   .horizontal-food-name{
+    h3{
+     font-size: 13px;
+    }
+   }
+  }
+  .horizontal-food-ins{
+   font-size: 10px;
+  }
+ }
+
+ 
 }

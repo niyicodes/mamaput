@@ -14,7 +14,7 @@ const HorizontalCard = ({
  rating,
  price,
  addOns,
- addItem
+ addItem,
 }) => {
  return (
   <div className="horizontal-food-card" id={id}>
@@ -45,7 +45,7 @@ const HorizontalCard = ({
      <div className="addons">
       {addOns &&
        addOns.map((addOn) => {
-        return <CheckBox name={addOn.name} key={addOn.name} />;
+        return <CheckBox name={addOn.name} key={addOn.name}/>;
        })}
      </div>
      <CustomButton

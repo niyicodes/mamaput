@@ -1,22 +1,28 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import './Navbar.scss'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./Navbar.scss";
 const Navbar = () => {
  return (
-  <div className='mini-navbar'>
+  <div className="mini-navbar">
    <ul className="mini-navbar-nav">
     <li>
-     <NavLink to="/" className="navlink">Home ➡</NavLink>
+     <NavLink to="/" className="navlink">
+      Home ➡
+     </NavLink>
     </li>
     <li>
-     <NavLink to="/" className="navlink">FoodMenu ➡</NavLink>
+     <NavLink to="/foodmenu" className="navlink">
+      FoodMenu ➡
+     </NavLink>
     </li>
     <li>
-     <NavLink to="/" className="navlink">Soups ➡</NavLink>
+     <NavLink to="/foodmenu/:name" className="navlink">
+      Soups ➡
+     </NavLink>
     </li>
    </ul>
   </div>
- )
-}
+ );
+};
 
-export default Navbar
+export default Navbar;
