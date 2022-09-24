@@ -39,7 +39,12 @@
   }
  }
 
- @media
+ @media(min-width:1024px){
+  margin: 20px;
+  .meals{
+   margin: 14px auto;
+  }
+ }
 
  @media (min-width: 568px) and (max-width: 884px) {
   max-width: 100%;
