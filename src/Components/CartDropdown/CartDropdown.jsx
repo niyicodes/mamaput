@@ -18,8 +18,8 @@ const CartDropdown = ({ cartItems, dispatch }) => {
     )}
    </div>
    <CustomButton
-    onClick={() => {navigate('/checkout'); dispatch(toggleCartHidden())}}
-    buttonName="Go to checkout"
+    onClick={() => {navigate('/order'); dispatch(toggleCartHidden())}}
+    buttonName="Order"
    />
   </div>
  );
