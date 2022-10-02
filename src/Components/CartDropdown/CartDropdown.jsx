@@ -1,13 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-// import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import CustomButton from "../Button/CustomButton";
 import CartItem from "../CartItem/CartItem";
 import "./CartDropdown.scss";
-// import {toggleCartHidden} from '../../Redux/Cart/cartActions'
+import {toggleCartHidden} from '../../Redux/Cart/cartActions'
 
-const CartDropdown = ({ cartItems }) => {
- // const navigate = useNavigate();
+const CartDropdown = ({ cartItems, dispatch }) => {
+ const navigate = useNavigate();
  return (
   <div className="cart-dropdown">
    <div className="cart-items">
@@ -18,7 +18,7 @@ const CartDropdown = ({ cartItems }) => {
     )}
    </div>
    <CustomButton
-    // onClick={() => {navigate('/checkout'); dispatch(toggleCartHidden())}}
+    onClick={() => {navigate('/checkout'); dispatch(toggleCartHidden())}}
     buttonName="Go to checkout"
    />
   </div>

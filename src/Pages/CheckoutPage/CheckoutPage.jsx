@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React from 'react'
 import { connect } from 'react-redux';
 import './checkoutPage.scss';
@@ -11,19 +12,19 @@ const CheckoutPage = ({cartItems, total}) => {
   <div className='checkout-page'>
    <div className="checkout-header">
     <div className="header-block">
-     <span>Product</span>
+     <h3>Product</h3>
     </div>
     <div className="header-block">
-     <span>Description</span>
+     <h3>Name</h3>
     </div>
     <div className="header-block">
-     <span>Quantity</span>
+     <h3>Quantity</h3>
     </div>
     <div className="header-block">
-     <span>Price</span>
+     <h3>Price</h3>
     </div>
     <div className="header-block">
-     <span>Remove</span>
+     <h3>Remove</h3>
     </div>
    </div>
    {
@@ -34,7 +35,7 @@ const CheckoutPage = ({cartItems, total}) => {
     })
    }
    <div className="total">
-    <span>TOTAL: ${total}</span>
+    <span>TOTAL: ₦{total}</span>
    </div>
   </div>
  )
@@ -46,5 +47,6 @@ const mapStateToProps = createStructuredSelector(
   total: selectCartTotal
  }
 )
+
 
 export default connect(mapStateToProps)(CheckoutPage);

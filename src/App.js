@@ -9,6 +9,7 @@ import Orders from './Pages/Orders/Orders';
 import SignInSignUp from './Pages/SignInSignUp/SignInSignUp';
 import Footer from './Components/Footer/Footer';
 import Soup from './Pages/MenuPage/Soup/Soup';
+import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
 
 
 
@@ -19,6 +20,7 @@ function App() {
      <Routes>
       <Route exact path='/' element={<HomePage />}/>
       <Route path='/contactUs' element={<Contact />}/>
+      <Route path='/checkout' element={<CheckoutPage />}/>
       <Route path='/foodmenu' element={<MenuPage />}/>
       <Route path='/foodmenu/:name' element={<Soup />}/>
       <Route path='/orders' element={<Orders />}/>
