@@ -39,9 +39,6 @@ const Header = ({hidden}) => {
       <NavLink to='/foodmenu' activeclassname="active" className="nav-links" onClick={closeMobileMenu}>foodmenu</NavLink>
      </li>
      <li className="nav-item">
-      <NavLink to='/orders' activeclassname="active" className="nav-links" onClick={closeMobileMenu}>order</NavLink>
-     </li>
-     <li className="nav-item">
       <NavLink to='/contactUs' activeclassname="active" className="nav-links" onClick={closeMobileMenu}>contact</NavLink>
      </li>
      <li className="nav-item">
